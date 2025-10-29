@@ -1,0 +1,292 @@
+/* Thiết lập chung & Biến CSS */
+:root {
+    --primary-color: #64ffda; /* Màu xanh neon nổi bật */
+    --secondary-color: #a8b2d1; /* Màu văn bản phụ */
+    --background-dark: #0a192f; /* Màu nền rất tối */
+    --background-light: #112240; /* Màu nền tối nhẹ */
+    --font-main: 'Poppins', sans-serif;
+    --font-mono: 'SF Mono', monospace;
+}
+
+/* 1. Reset và Font */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Nhúng font (Cần thêm <link> trong HTML hoặc @import) */
+/* Ví dụ: @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap'); */
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--background-dark);
+    color: var(--secondary-color);
+    line-height: 1.6;
+    scroll-behavior: smooth;
+    padding: 0 50px; /* Thêm padding hai bên cho màn hình lớn */
+}
+
+/* 2. Header và Navigation */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    position: fixed; /* Thanh điều hướng cố định */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: rgba(10, 25, 47, 0.95); /* Nền hơi trong suốt */
+    backdrop-filter: blur(10px); /* Hiệu ứng làm mờ */
+    padding: 20px 50px;
+    box-shadow: 0 10px 30px -10px rgba(2, 12, 27, 0.7);
+}
+
+.logo {
+    font-family: var(--font-mono);
+    font-size: 24px;
+    color: var(--primary-color);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    transition: color 0.3s ease-in-out;
+    font-size: 14px;
+    font-family: var(--font-mono);
+}
+
+nav ul li a:hover {
+    color: var(--primary-color);
+}
+
+/* 3. Phần Trang Chủ (Hero Section) */
+.hero-section {
+    min-height: 100vh; /* Chiếm toàn bộ chiều cao màn hình */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 100px; /* Để tránh Header fixed */
+}
+
+.hero-content {
+    max-width: 60%;
+}
+
+.hero-content h1 {
+    color: #ccd6f6;
+    font-size: 5vw; /* Kích thước chữ linh hoạt theo màn hình */
+    margin-bottom: 10px;
+}
+
+.hero-content h2 {
+    color: var(--primary-color);
+    font-size: 2.5vw;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    max-width: 540px;
+    margin-bottom: 40px;
+}
+
+.hero-image img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%; /* Ảnh tròn */
+    object-fit: cover;
+    border: 3px solid var(--primary-color);
+    filter: grayscale(100%) contrast(1); /* Hiệu ứng ảnh đơn sắc */
+    transition: all 0.5s ease-in-out;
+}
+
+.hero-image img:hover {
+    filter: grayscale(0%) contrast(1);
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 15px 25px;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.3s;
+}
+
+.cta-button:hover {
+    background-color: rgba(100, 255, 218, 0.1); /* Hiệu ứng hover nhẹ */
+}
+
+/* 4. Các Phần Khác (Section Styling) */
+section {
+    padding: 100px 0;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+section h2 {
+    font-size: 32px;
+    color: #ccd6f6;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+/* Gạch chân dưới tiêu đề */
+section h2::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 1px;
+    background-color: var(--secondary-color);
+    margin-top: 10px;
+}
+
+/* 5. Phần Dự Án (Portfolio Grid) */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Grid linh hoạt */
+    gap: 30px;
+}
+
+.project-card {
+    background-color: var(--background-light);
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.project-card:hover {
+    transform: translateY(-5px); /* Hiệu ứng nâng lên */
+    box-shadow: 0 20px 50px -20px rgba(2, 12, 27, 0.9);
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.project-card h3 {
+    color: #ccd6f6;
+    margin-bottom: 10px;
+}
+
+/* 6. Phần Liên Hệ (Form Styling) */
+.contact-section form {
+    max-width: 500px;
+    margin: 0 auto 30px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-section label {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.contact-section input,
+.contact-section textarea {
+    padding: 15px;
+    border: 1px solid var(--background-light);
+    background-color: var(--background-light);
+    color: #ccd6f6;
+    border-radius: 4px;
+    transition: border-color 0.3s;
+}
+
+.contact-section input:focus,
+.contact-section textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.contact-section button {
+    background-color: var(--primary-color);
+    color: var(--background-dark);
+    border: none;
+    padding: 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 700;
+    transition: background-color 0.3s;
+}
+
+.contact-section button:hover {
+    background-color: #52c7a6;
+}
+
+.social-links a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: var(--primary-color);
+}
+
+/* 7. Footer */
+footer {
+    text-align: center;
+    padding: 40px 0;
+    border-top: 1px solid var(--background-light);
+    font-size: 14px;
+    font-family: var(--font-mono);
+}
+
+/* 8. Thiết kế đáp ứng (Responsive Design) */
+@media (max-width: 768px) {
+    body {
+        padding: 0 25px; /* Giảm padding cho màn hình nhỏ */
+    }
+
+    header {
+        padding: 15px 25px;
+    }
+
+    nav {
+        display: none; /* Ẩn navigation trên di động, thường dùng menu Hamburger */
+    }
+
+    .hero-section {
+        flex-direction: column; /* Xếp chồng nội dung và ảnh */
+        text-align: center;
+        min-height: auto;
+    }
+    
+    .hero-content {
+        max-width: 100%;
+        order: 2; /* Đặt nội dung dưới ảnh */
+    }
+
+    .hero-content h1 {
+        font-size: 8vw;
+    }
+    
+    .hero-content h2 {
+        font-size: 4vw;
+    }
+
+    .hero-image {
+        order: 1; /* Đặt ảnh lên trên */
+        margin-bottom: 40px;
+    }
+}
