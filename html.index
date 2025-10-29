@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tên Của Bạn - Portfolio Cá Nhân</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">Tên Của Bạn</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Trang Chủ</a></li>
+                <li><a href="#about">Về Tôi</a></li>
+                <li><a href="#portfolio">Dự Án</a></li>
+                <li><a href="#contact">Liên Hệ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        
+        <section id="home" class="hero-section">
+            <div class="hero-content">
+                <h1>Chào, tôi là **[Tên Của Bạn]**</h1>
+                <h2>[Chức Danh/Vai Trò Của Bạn]</h2>
+                <p>Một câu ngắn gọn giới thiệu về bạn, định hướng sự nghiệp, hoặc slogan cá nhân.</p>
+                <a href="#portfolio" class="cta-button">Xem Các Dự Án Của Tôi</a>
+            </div>
+            <div class="hero-image">
+                <img src="your-photo.jpg" alt="Ảnh Chân Dung Của Tên Của Bạn">
+            </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <h2>Về Tôi 👋</h2>
+            <p>Viết câu chuyện của bạn ở đây. Kể về hành trình, niềm đam mê và giá trị cá nhân. Ví dụ: Tôi có [X] năm kinh nghiệm trong lĩnh vực [Lĩnh vực].</p>
+            
+            <h3>Kỹ Năng Chính</h3>
+            <ul>
+                <li>**Kỹ năng cứng:** HTML, CSS, JavaScript, Figma, SEO, v.v.</li>
+                <li>**Kỹ năng mềm:** Giải quyết vấn đề, Giao tiếp, Làm việc nhóm.</li>
+            </ul>
+        </section>
+
+        <section id="portfolio" class="portfolio-section">
+            <h2>Các Dự Án Tiêu Biểu 💼</h2>
+            
+            <div class="project-grid">
+                <div class="project-card">
+                    <img src="project-1-thumbnail.jpg" alt="Ảnh Dự Án 1">
+                    <h3>Tên Dự Án Số 1</h3>
+                    <p>Mô tả ngắn gọn về dự án: Vấn đề đã giải quyết và kết quả đạt được.</p>
+                    <a href="link-to-project-detail.html">Xem chi tiết Case Study</a>
+                </div>
+
+                <div class="project-card">
+                    <img src="project-2-thumbnail.jpg" alt="Ảnh Dự Án 2">
+                    <h3>Tên Dự Án Số 2</h3>
+                    <p>Mô tả ngắn gọn về dự án: Công cụ/Công nghệ đã sử dụng.</p>
+                    <a href="link-to-project-detail-2.html">Xem chi tiết Case Study</a>
+                </div>
+                </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <h2>Liên Hệ Với Tôi 📧</h2>
+            <p>Hãy gửi email nếu bạn có dự án mới hoặc muốn hợp tác!</p>
+            
+            <form action="#" method="POST">
+                <label for="name">Tên:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Lời nhắn:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+                
+                <button type="submit">Gửi Tin Nhắn</button>
+            </form>
+            
+            <div class="social-links">
+                <a href="https://linkedin.com/in/yourprofile">LinkedIn</a> |
+                <a href="https://github.com/yourprofile">GitHub</a> |
+                <a href="mailto:your.email@example.com">Email: your.email@example.com</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Tên Của Bạn. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
